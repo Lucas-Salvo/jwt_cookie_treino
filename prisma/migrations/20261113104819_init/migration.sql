@@ -1,0 +1,15 @@
+-- CreateTable
+CREATE TABLE "Usuarios" (
+    "id" SERIAL NOT NULL,
+    "email" TEXT NOT NULL,
+    "senha" TEXT NOT NULL,
+    "cpf" TEXT NOT NULL,
+
+    CONSTRAINT "Usuarios_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Usuarios_email_key" ON "Usuarios"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Usuarios_cpf_key" ON "Usuarios"("cpf");
